@@ -1,0 +1,11 @@
+{
+  "region": "cn-north-4",
+  "accessKeySecretRef": {
+    "name": "huawei-api-secret",
+    "key": "accessKey"
+  },
+  "secretKeySecretRef": {
+    "name": "huawei-api-secret",
+    "key": "secretKey"
+  }
+}
