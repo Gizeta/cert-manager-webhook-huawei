@@ -1,7 +1,7 @@
 OS ?= $(shell go env GOOS)
 ARCH ?= $(shell go env GOARCH)
 
-IMAGE_NAME := "webhook"
+IMAGE_NAME := "skyfish624/cert-manager-webhook-huawei"
 IMAGE_TAG := "latest"
 
 OUT := $(shell pwd)/_out
@@ -30,7 +30,7 @@ clean-kubebuilder:
 	rm -Rf _test/kubebuilder
 
 build:
-	docker build -t "$(IMAGE_NAME):$(IMAGE_TAG)" .
+	docker buildx build -t "$(IMAGE_NAME):$(IMAGE_TAG)" --platform linux/arm64,linux/amd64 --push .
 
 .PHONY: rendered-manifest.yaml
 rendered-manifest.yaml:
@@ -38,4 +38,4 @@ rendered-manifest.yaml:
 	    --name example-webhook \
         --set image.repository=$(IMAGE_NAME) \
         --set image.tag=$(IMAGE_TAG) \
-        deploy/example-webhook > "$(OUT)/rendered-manifest.yaml"
+        deploy/cert-manager-webhook-huawei > "$(OUT)/rendered-manifest.yaml"
