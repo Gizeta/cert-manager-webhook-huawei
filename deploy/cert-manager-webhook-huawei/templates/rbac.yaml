@@ -160,5 +160,5 @@ roleRef:
 subjects:
   - apiGroup: ""
     kind: ServiceAccount
-    name: {{ .Values.certManager.serviceAccountName }}
-    namespace: {{ .Values.certManager.namespace }}
+    name: {{ include "cert-manager-webhook-huawei.fullname" . }}
+    namespace: {{ .Release.Namespace }}
