@@ -3,6 +3,15 @@ entries:
   cert-manager-webhook-huawei:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2022-10-05T12:08:33.390826664Z"
+    description: A cert-manager ACME DNS01 solver webhook for for Huawei Cloud
+    digest: 165bcece3c46c1fa4b07276789c4b7c4e10fb2c98a079fbc2eb12f2014148ec3
+    name: cert-manager-webhook-huawei
+    urls:
+    - https://github.com/Gizeta/cert-manager-webhook-huawei/releases/download/cert-manager-webhook-huawei-0.1.1/cert-manager-webhook-huawei-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2022-10-04T07:03:16.371751271Z"
     description: A cert-manager ACME DNS01 solver webhook for for Huawei Cloud
     digest: 9972856f9c5faf328f9c9777ef0e98a1a98dee67daf2484dd7f6b79f664eabe5
@@ -20,4 +29,4 @@ entries:
     urls:
     - https://github.com/Gizeta/cert-manager-webhook-huawei/releases/download/example-webhook-0.1.0/example-webhook-0.1.0.tgz
     version: 0.1.0
-generated: "2022-10-04T07:03:16.607657592Z"
+generated: "2022-10-05T12:08:33.390833664Z"
